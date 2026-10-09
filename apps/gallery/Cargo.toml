@@ -1,0 +1,29 @@
+[package]
+name = "gallery"
+description = "A tour of the UI widgets, with docked panes and four themes"
+edition.workspace = true
+version.workspace = true
+publish.workspace = true
+license.workspace = true
+
+[dependencies]
+gallery-widgets = { path = "crates/gallery-widgets" }
+ennui.workspace = true
+ennui-platform.workspace = true
+ennui-quads.workspace = true
+ennui-render.workspace = true
+ennui-sets.workspace = true
+ennui-text.workspace = true
+ennui-ui.workspace = true
+ennui-ui-controls.workspace = true
+ennui-ui-dock.workspace = true
+ennui-ui-icons.workspace = true
+ennui-trace.workspace = true
+nalgebra-glm.workspace = true
+
+[features]
+tracy = ["ennui-trace/tracy"]
+chrome = ["ennui-trace/chrome"]
+
+[lints]
+workspace = true

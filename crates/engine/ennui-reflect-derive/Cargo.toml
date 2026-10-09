@@ -1,0 +1,13 @@
+[package]
+name = "ennui-reflect-derive"
+description = "The Reflect derive, written against the compiler's own token streams with no other crate"
+edition.workspace = true
+version.workspace = true
+publish.workspace = true
+license.workspace = true
+
+[lib]
+proc-macro = true
+
+[lints]
+workspace = true

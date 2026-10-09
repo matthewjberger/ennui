@@ -1,0 +1,134 @@
+[package]
+name = "template"
+description = "An app skeleton to copy: an editor project with a home screen and a settings screen, a theme, a text table, and a back key that steps between screens"
+edition.workspace = true
+version.workspace = true
+publish.workspace = true
+
+[dependencies]
+ennui.workspace = true
+ennui-document.workspace = true
+ennui-input.workspace = true
+ennui-platform.workspace = true
+ennui-screens.workspace = true
+ennui-state.workspace = true
+ennui-sets.workspace = true
+ennui-ui-controls.workspace = true
+ennui-trace.workspace = true
+ennui-dylib = { workspace = true, optional = true }
+
+[features]
+dynamic = ["dep:ennui-dylib"]
+tracy = ["ennui-trace/tracy"]
+chrome = ["ennui-trace/chrome"]
+
+[lints]
+workspace = true
+
+[workspace]
+members = ["."]
+resolver = "3"
+
+[profile.web]
+inherits = "release"
+opt-level = "s"
+lto = "fat"
+codegen-units = 1
+incremental = false
+panic = "abort"
+
+[workspace.package]
+edition = "2024"
+version = "0.1.0"
+publish = false
+license = "MIT OR Apache-2.0"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace.dependencies]
+ennui = { path = "../crates/engine/ennui" }
+ennui-ecs = { path = "../crates/engine/ennui-ecs" }
+ennui-reflect = { path = "../crates/engine/ennui-reflect" }
+ennui-reflect-derive = { path = "../crates/engine/ennui-reflect-derive" }
+ennui-document = { path = "../crates/engine/ennui-document" }
+ennui-animation = { path = "../crates/engine/ennui-animation" }
+ennui-bind = { path = "../crates/engine/ennui-bind" }
+ennui-lines = { path = "../crates/engine/ennui-lines" }
+ennui-screens = { path = "../crates/engine/ennui-screens" }
+ennui-dylib = { path = "../crates/engine/ennui-dylib" }
+ennui-input = { path = "../crates/engine/ennui-input" }
+ennui-platform = { path = "../crates/engine/ennui-platform" }
+ennui-scene = { path = "../crates/engine/ennui-scene" }
+ennui-sets = { path = "../crates/engine/ennui-sets" }
+ennui-render = { path = "../crates/rendering/ennui-render" }
+ennui-quads = { path = "../crates/rendering/ennui-quads" }
+ennui-state = { path = "../crates/engine/ennui-state" }
+ennui-text = { path = "../crates/engine/ennui-text" }
+ennui-trace = { path = "../crates/engine/ennui-trace" }
+ennui-watch = { path = "../crates/engine/ennui-watch" }
+ennui-ui = { path = "../crates/ui/ennui-ui" }
+ennui-ui-rate = { path = "../crates/ui/ennui-ui-rate" }
+ennui-ui-controls = { path = "../crates/ui/ennui-ui-controls" }
+ennui-ui-dock = { path = "../crates/ui/ennui-ui-dock" }
+ennui-ui-icons = { path = "../crates/ui/ennui-ui-icons" }
+ennui-ui-focus = { path = "../crates/ui/ennui-ui-focus" }
+ennui-ui-repeat = { path = "../crates/ui/ennui-ui-repeat" }
+ennui-wgpu = { path = "../crates/rendering/ennui-wgpu" }
+ennui-wgpu-overlay = { path = "../crates/rendering/ennui-wgpu-overlay" }
+ennui-pictures = { path = "../crates/rendering/ennui-pictures" }
+ennui-window = { path = "../crates/rendering/ennui-window" }
+arboard = "3"
+rfd = { version = "0.17", default-features = false, features = ["xdg-portal"] }
+bytemuck = { version = "1", features = ["derive"] }
+clap = { version = "4", features = ["derive"] }
+cosmic-text = "0.14"
+env_logger = { version = "0.11", default-features = false, features = ["auto-color"] }
+log = "0.4"
+profiling = "1"
+tracing = "0.1"
+tracing-chrome = "0.7"
+tracing-subscriber = "0.3"
+tracing-tracy = "0.11"
+image = { version = "0.25", default-features = false, features = [
+    "jpeg",
+    "png",
+    "gif",
+    "webp",
+    "hdr",
+] }
+notify = "8.2"
+nalgebra-glm = "0.20"
+rayon = "1"
+png = "0.18"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+brotli-decompressor = "5"
+pollster = "0.4"
+naga_oil = { version = "0.22", default-features = false }
+wgpu = { version = "29", features = ["naga-ir"] }
+winit = "0.30.13"
+web-time = "1"
+wasm-bindgen = "0.2"
+wasm-bindgen-futures = "0.4"
+js-sys = "0.3"
+web-sys = "0.3"
+console_error_panic_hook = "0.1"
+
+[profile.play]
+inherits = "release"
+incremental = false
+codegen-units = 256
+
+[profile.play.package."*"]
+incremental = false
+codegen-units = 16
+
+[profile.export]
+inherits = "release"
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+incremental = false
+debug = false
+strip = "symbols"

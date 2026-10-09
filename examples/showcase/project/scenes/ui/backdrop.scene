@@ -1,0 +1,51 @@
+ennui scene 1
+
+entity backdrop "Backdrop"
+    Host
+    Host.sizing Tall
+    Host.layer 0
+    Panel.wide Fill[1]
+    Panel.tall Fill[1]
+    Panel.clips true
+    Style.fill Named["deep"]
+
+entity glow_band "Glow band"
+    parent backdrop
+    Order 0
+    Pin.at 0.62 0.38
+    Pin.pivot 0.5 0.5
+    Panel.wide Fixed[1800]
+    Panel.tall Fixed[260]
+    Turn 0.38
+    Style.fill Color[0.35 0.9 1 0.018]
+
+entity beacon_band "Beacon band"
+    parent backdrop
+    Order 1
+    Pin.at 0.7 0.55
+    Pin.pivot 0.5 0.5
+    Panel.wide Fixed[1800]
+    Panel.tall Fixed[120]
+    Turn 0.38
+    Style.fill Color[1 0.55 0.1 0.04]
+
+entity thin_band "Thin band"
+    parent backdrop
+    Order 2
+    Pin.at 0.78 0.66
+    Pin.pivot 0.5 0.5
+    Panel.wide Fixed[1800]
+    Panel.tall Fixed[10]
+    Turn 0.38
+    Style.fill Color[1 0.55 0.1 0.3]
+
+entity word "Word"
+    parent backdrop
+    Order 3
+    Pin.at 0 1
+    Pin.pivot 0 1
+    Pin.nudge 40 6
+    Text.size Fixed[160]
+    Text.color Color[1 0.95 0.84 0.008]
+    Text.font "assets/fonts/bebas_neue/BebasNeue-Regular.ttf"
+    Bind.entries [{target "Text.words" source "{text.ui.backdrop_word}" format Plain back false}]

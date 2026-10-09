@@ -1,0 +1,7 @@
+/target
+.claude/worktrees/
+/trace.json
+__pycache__/
+.claude/settings.local.json
+
+.ennui/

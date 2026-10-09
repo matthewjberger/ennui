@@ -1,0 +1,15 @@
+[package]
+name = "ennui-animation"
+edition.workspace = true
+version.workspace = true
+publish.workspace = true
+license.workspace = true
+
+[dependencies]
+ennui.workspace = true
+ennui-document.workspace = true
+ennui-platform.workspace = true
+ennui-scene.workspace = true
+
+[lints]
+workspace = true

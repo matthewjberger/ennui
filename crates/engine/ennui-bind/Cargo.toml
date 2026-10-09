@@ -1,0 +1,17 @@
+[package]
+name = "ennui-bind"
+description = "Data bindings: a Bind component fills reflected fields of its entity from resources, the subject entity, the list item and text tables, with formats, samples for the editor and two-way entries"
+edition.workspace = true
+version.workspace = true
+publish.workspace = true
+license.workspace = true
+
+[dependencies]
+ennui.workspace = true
+ennui-animation.workspace = true
+ennui-document.workspace = true
+ennui-lines.workspace = true
+ennui-scene.workspace = true
+
+[lints]
+workspace = true

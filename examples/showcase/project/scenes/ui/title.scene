@@ -1,0 +1,185 @@
+ennui scene 1
+
+entity title "Title"
+    Host
+    Host.modal true
+    Host.sizing Tall
+    Host.layer 1
+    Panel.wide Fill[1]
+    Panel.tall Fill[1]
+
+entity menu "Menu"
+    parent title
+    Order 0
+    Pin.at 0 0
+    Pin.pivot 0 0
+    Panel.wide Fixed[620]
+    Panel.tall Fixed[720]
+    Panel.pad 64
+    Panel.gap 0
+    Panel.across Start
+    Panel.along Start
+    Bind.entries [{target "Pin.nudge" source "{Motion.left}" format Plain back false}]
+
+entity heading "Heading"
+    parent menu
+    Order 0
+    Text.size Fixed[120]
+    Text.color Named["cream"]
+    Text.font "assets/fonts/bebas_neue/BebasNeue-Regular.ttf"
+    Panel.tall Fixed[104]
+    Bind.entries [{target "Text.words" source "{text.ui.title_top}" format Plain back false}]
+
+entity heading_two "Heading two"
+    parent menu
+    Order 1
+    Text.size Fixed[120]
+    Text.color Named["beacon"]
+    Text.font "assets/fonts/bebas_neue/BebasNeue-Regular.ttf"
+    Panel.tall Fixed[104]
+    Bind.entries [{target "Text.words" source "{text.ui.title_bottom}" format Plain back false}]
+
+entity stripe "Stripe"
+    parent menu
+    Order 2
+    Panel.wide Fixed[380]
+    Panel.tall Fixed[26]
+    Turn -0.03
+    Style.picture "assets/textures/ui/stripe.png"
+    Style.fill Color[1 1 1 1]
+
+entity tagline "Tagline"
+    parent menu
+    Order 3
+    Panel.tall Fixed[48]
+    Text.size Fixed[18]
+    Text.color Named["glow"]
+    Bind.entries [{target "Text.words" source "{text.ui.tagline}" format Plain back false} {target "Style.opacity" source "{Motion.pulse}" format Plain back false}]
+
+entity choices "Choices"
+    parent menu
+    Order 4
+    Panel.gap 8
+    Panel.across Start
+
+entity profile "Profile"
+    parent choices
+    Order 0
+    Button.ask "profile"
+    Panel.wide Fixed[320]
+    Panel.tall Fixed[46]
+    Panel.pad 18
+    Panel.across Start
+    Style.picture "assets/textures/ui/button.png"
+    Style.corner 12
+    Style.shaped true
+    Style.fill Named["raised"]
+    Style.hover.fill Named["beacon"]
+    Style.focus.fill Named["beacon"]
+    Style.hover.ink Named["night"]
+    Style.focus.ink Named["night"]
+    Style.hover.grow 0.05
+    Style.focus.grow 0.05
+    Text.font "assets/fonts/bebas_neue/BebasNeue-Regular.ttf"
+    Text.size Fixed[30]
+    Text.color Named["beacon"]
+    Bind.entries [{target "Text.words" source "{text.ui.profile}" format Plain back false}]
+
+entity settings "Settings"
+    parent choices
+    Order 1
+    Button.ask "settings"
+    Panel.wide Fixed[320]
+    Panel.tall Fixed[46]
+    Panel.pad 18
+    Panel.across Start
+    Style.picture "assets/textures/ui/button.png"
+    Style.corner 12
+    Style.shaped true
+    Style.fill Named["raised"]
+    Style.hover.fill Named["beacon"]
+    Style.focus.fill Named["beacon"]
+    Style.hover.ink Named["night"]
+    Style.focus.ink Named["night"]
+    Style.hover.grow 0.05
+    Style.focus.grow 0.05
+    Text.font "assets/fonts/bebas_neue/BebasNeue-Regular.ttf"
+    Text.size Fixed[30]
+    Text.color Named["cream"]
+    Bind.entries [{target "Text.words" source "{text.ui.settings}" format Plain back false}]
+
+entity quit "Quit"
+    parent choices
+    Order 2
+    Button.ask "quit"
+    Panel.wide Fixed[320]
+    Panel.tall Fixed[46]
+    Panel.pad 18
+    Panel.across Start
+    Style.picture "assets/textures/ui/button.png"
+    Style.corner 12
+    Style.shaped true
+    Style.fill Named["raised"]
+    Style.hover.fill Named["beacon"]
+    Style.focus.fill Named["beacon"]
+    Style.hover.ink Named["night"]
+    Style.focus.ink Named["night"]
+    Style.hover.grow 0.05
+    Style.focus.grow 0.05
+    Text.font "assets/fonts/bebas_neue/BebasNeue-Regular.ttf"
+    Text.size Fixed[30]
+    Text.color Named["cream"]
+    Bind.entries [{target "Text.words" source "{text.ui.quit}" format Plain back false}]
+
+entity ticket_spot "Ticket spot"
+    parent title
+    Order 1
+    Pin.at 1 1
+    Pin.pivot 1 1
+    Pin.nudge -56 -56
+    Panel.wide Fixed[400]
+    Panel.tall Fixed[156]
+
+entity ticket "Ticket"
+    parent ticket_spot
+    Order 0
+    Pin.at 0 1
+    Pin.pivot 0 1
+    Panel.wide Fixed[400]
+    Panel.pad 24
+    Panel.gap 4
+    Panel.across Start
+    Turn 0.03
+    Style.fill Named["paper"]
+    Style.shadow Color[0 0 0 0.5]
+    Style.cast 0 12 30 0
+    Bind.entries [{target "Pin.nudge" source "{Motion.right}" format Plain back false}]
+
+entity ticket_label "Ticket label"
+    parent ticket
+    Order 0
+    Text.size Fixed[16]
+    Text.color Named["warn"]
+    Bind.entries [{target "Text.words" source "{text.ui.tonight}" format Plain back false}]
+
+entity ticket_route "Ticket route"
+    parent ticket
+    Order 1
+    Text.size Fixed[52]
+    Text.color Named["night"]
+    Text.font "assets/fonts/bebas_neue/BebasNeue-Regular.ttf"
+    Bind.entries [{target "Text.words" source "{text.ui.tonight_route}" format Plain back false}]
+
+entity ticket_rule "Ticket rule"
+    parent ticket
+    Order 2
+    Panel.wide Fill[1]
+    Panel.tall Fixed[2]
+    Style.fill Named["rule"]
+
+entity ticket_stops "Ticket stops"
+    parent ticket
+    Order 3
+    Text.size Fixed[15]
+    Text.color Named["night"]
+    Bind.entries [{target "Text.words" source "{text.ui.tonight_stops}" format Plain back false}]

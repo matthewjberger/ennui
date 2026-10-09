@@ -1,0 +1,15 @@
+pub(crate) const SPIN_BEAT: f32 = 1.2;
+pub(crate) const SPIN_APART: f32 = 0.18;
+pub(crate) const SPIN_DIMMEST: f32 = 0.25;
+pub(crate) const LEAST_SHARE: f32 = 0.05;
+pub(crate) const MOST_SHARE: f32 = 0.95;
+pub(crate) const ALMANAC_CELL: f32 = 26.0;
+pub(crate) const ALMANAC_HEAD: f32 = 0.7;
+pub(crate) const ALMANAC_WEEKS: u32 = 6;
+pub(crate) const GRID_HEAD: f32 = 0.8;
+pub(crate) const NOTE_DOT: f32 = 8.0;
+pub(crate) const NOTE_GAP: f32 = 0.6;
+pub(crate) const NOTE_DOTS: usize = 3;
+pub(crate) const ICON_PAD: f32 = 0.22;
+pub(crate) const LIST_ROWS: f32 = 4.0;
+pub(crate) const SPLIT_BAR: f32 = 4.0;

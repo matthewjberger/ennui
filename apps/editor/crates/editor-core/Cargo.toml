@@ -1,0 +1,30 @@
+[package]
+name = "editor-core"
+description = "The scene editor core: the shell, the inspector and outline, picking and dragging elements, and a localhost command socket that Claude drives while the user watches"
+edition.workspace = true
+version.workspace = true
+publish.workspace = true
+license.workspace = true
+
+[dependencies]
+ennui.workspace = true
+ennui-animation.workspace = true
+ennui-bind.workspace = true
+editor-choose = { path = "../editor-choose" }
+ennui-document.workspace = true
+ennui-platform.workspace = true
+ennui-scene.workspace = true
+ennui-text.workspace = true
+ennui-ui.workspace = true
+editor-document = { path = "../editor-document" }
+editor-edit = { path = "../editor-edit" }
+ennui-ui-controls.workspace = true
+ennui-ui-dock.workspace = true
+ennui-ui-focus.workspace = true
+ennui-ui-icons.workspace = true
+ennui-ui-rate.workspace = true
+ennui-watch.workspace = true
+nalgebra-glm.workspace = true
+
+[lints]
+workspace = true

@@ -1,0 +1,15 @@
+ennui scene 1
+
+entity theme "Theme"
+    Theme
+    Theme.ink 0.92 0.93 0.95 1
+    Theme.faint 0.5 0.54 0.6 1
+    Theme.panel 0.07 0.08 0.1 0.94
+    Theme.header 0.13 0.15 0.19 1
+    Theme.edge 0.26 0.3 0.38 1
+    Theme.accent 0.3 0.62 1 1
+    Theme.text 16
+    Theme.heading 30
+    Theme.caption 13
+    Theme.round 8
+    Theme.named [{name "glow" color [0.35 0.9 1 1]}]

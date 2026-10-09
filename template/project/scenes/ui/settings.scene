@@ -1,0 +1,69 @@
+ennui scene 1
+
+entity settings "Settings"
+    Host
+    Host.sizing Tall
+    Host.modal true
+    Panel.wide Fill[1]
+    Panel.tall Fill[1]
+
+entity card "Card"
+    parent settings
+    Panel.wide Fixed[420]
+    Panel.pad 28
+    Panel.gap 14
+    Style.fill Panel
+    Style.border 1.44
+    Style.round 12
+
+entity heading "Heading"
+    parent card
+    Order 0
+    Text.size Heading
+    Bind.entries [{target "Text.words" source "{text.ui.settings}" format Plain back false}]
+
+entity scale_row "Scale row"
+    parent card
+    Order 1
+    Panel.wide Fill[1]
+    Panel.flow Row
+    Panel.gap 10
+
+entity scale_label "Scale label"
+    parent scale_row
+    Order 0
+    Panel.wide Fixed[90]
+    Panel.across Start
+    Bind.entries [{target "Text.words" source "{text.ui.scale}" format Plain back false}]
+
+entity scale "Scale"
+    parent scale_row
+    Order 1
+    Slider.low 0.5
+    Slider.high 2
+    Slider.step 0.01
+    Panel.wide Fill[1]
+    Panel.tall Fixed[20]
+    Panel.flow Row
+    Bind.entries [{target "Slider.value" source "{Interface.scale}" format Plain back true}]
+    Samples [["Interface.scale" 1]]
+
+entity scale_value "Scale value"
+    parent scale_row
+    Order 2
+    Panel.wide Fixed[48]
+    Text.color Faint
+    Bind.entries [{target "Text.words" source "{Interface.scale}" format Decimals[2] back false}]
+    Samples [["Interface.scale" 1]]
+
+entity back "Back"
+    parent card
+    Order 2
+    Button.ask "back"
+    Panel.wide Fill[1]
+    Panel.tall Fixed[40]
+    Style.fill Header
+    Style.round 8
+    Style.hover.fill Accent
+    Text.color Ink
+    Bind.entries [{target "Text.words" source "{text.ui.back}" format Plain back false}]

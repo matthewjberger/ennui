@@ -1,0 +1,18 @@
+[package]
+name = "ennui"
+edition.workspace = true
+version.workspace = true
+publish.workspace = true
+license.workspace = true
+
+[dependencies]
+ennui-ecs = { workspace = true }
+ennui-reflect = { workspace = true }
+ennui-reflect-derive = { workspace = true }
+log = { workspace = true }
+
+[features]
+profiling = ["ennui-ecs/profiling"]
+
+[lints]
+workspace = true

@@ -1,0 +1,17 @@
+[package]
+name = "ennui-document"
+description = "The ennui scene format: a line based text of entities, component leaves and resource settings, with layers and references, loaded into the world and read back"
+edition.workspace = true
+version.workspace = true
+publish.workspace = true
+license.workspace = true
+
+[dependencies]
+ennui.workspace = true
+log.workspace = true
+ennui-platform.workspace = true
+ennui-scene.workspace = true
+ennui-watch.workspace = true
+
+[lints]
+workspace = true

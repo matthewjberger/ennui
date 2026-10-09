@@ -1,0 +1,28 @@
+[package]
+name = "ennui-sets"
+description = "The plugin sets most apps share: the window with the file watcher, scenes, text and screens, and the interface"
+edition.workspace = true
+version.workspace = true
+publish.workspace = true
+license.workspace = true
+
+[dependencies]
+ennui.workspace = true
+ennui-document.workspace = true
+ennui-render.workspace = true
+ennui-scene.workspace = true
+ennui-text.workspace = true
+ennui-ui.workspace = true
+ennui-ui-controls.workspace = true
+ennui-ui-repeat.workspace = true
+ennui-ui-focus.workspace = true
+ennui-watch.workspace = true
+ennui-wgpu-overlay.workspace = true
+ennui-animation.workspace = true
+ennui-bind.workspace = true
+ennui-lines.workspace = true
+ennui-screens.workspace = true
+ennui-window.workspace = true
+
+[lints]
+workspace = true

@@ -1,0 +1,9 @@
+pub(crate) const BAR: f32 = 6.0;
+pub(crate) const STRIP: f32 = 24.0;
+pub(crate) const SLIM: f32 = 20.0;
+pub(crate) const MARK: f32 = 2.0;
+pub(crate) const EDGE: f32 = 0.25;
+pub(crate) const GRAB: f32 = 7.0;
+pub(crate) const TAB_SIDE: f32 = 1.25;
+pub(crate) const LEAST_WIDE: f32 = 160.0;
+pub(crate) const LEAST_TALL: f32 = 80.0;

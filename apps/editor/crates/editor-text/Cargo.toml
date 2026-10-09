@@ -1,0 +1,22 @@
+[package]
+name = "editor-text"
+description = "The Text pane of the editor: every text table entry and inline text of the project in one searchable list, edited in the row, with where each is used and a knob that moves an inline text into a table"
+edition.workspace = true
+version.workspace = true
+publish.workspace = true
+license.workspace = true
+
+[dependencies]
+editor-core = { path = "../editor-core" }
+editor-document = { path = "../editor-document" }
+ennui.workspace = true
+ennui-bind.workspace = true
+ennui-document.workspace = true
+ennui-platform.workspace = true
+ennui-lines.workspace = true
+ennui-ui.workspace = true
+ennui-ui-controls.workspace = true
+ennui-ui-icons.workspace = true
+
+[lints]
+workspace = true

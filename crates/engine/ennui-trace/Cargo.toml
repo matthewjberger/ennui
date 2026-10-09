@@ -1,0 +1,21 @@
+[package]
+name = "ennui-trace"
+description = "Send ennui spans to Tracy or to a Chrome trace file"
+edition.workspace = true
+version.workspace = true
+publish.workspace = true
+license.workspace = true
+
+[dependencies]
+ennui.workspace = true
+profiling = { workspace = true, optional = true, features = ["profile-with-tracing"] }
+tracing-subscriber = { workspace = true, optional = true }
+tracing-chrome = { workspace = true, optional = true }
+tracing-tracy = { workspace = true, optional = true }
+
+[features]
+tracy = ["ennui/profiling", "dep:profiling", "dep:tracing-subscriber", "dep:tracing-tracy"]
+chrome = ["ennui/profiling", "dep:profiling", "dep:tracing-subscriber", "dep:tracing-chrome"]
+
+[lints]
+workspace = true

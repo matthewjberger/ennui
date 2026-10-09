@@ -1,0 +1,16 @@
+[package]
+name = "ennui-lines"
+description = "Text tables: each scenes/text/<table>.scene holds Line entries keyed by entity id, loaded as a library with live reload and looked up by table and key"
+edition.workspace = true
+version.workspace = true
+publish.workspace = true
+license.workspace = true
+
+[dependencies]
+ennui.workspace = true
+ennui-document.workspace = true
+ennui-platform.workspace = true
+ennui-watch.workspace = true
+
+[lints]
+workspace = true

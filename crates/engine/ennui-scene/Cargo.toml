@@ -1,0 +1,12 @@
+[package]
+name = "ennui-scene"
+edition.workspace = true
+version.workspace = true
+publish.workspace = true
+license.workspace = true
+
+[dependencies]
+ennui.workspace = true
+
+[lints]
+workspace = true

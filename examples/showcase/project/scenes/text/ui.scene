@@ -1,0 +1,58 @@
+ennui scene 1
+
+entity title_top "Title top"
+    Line.words "NIGHT"
+
+entity title_bottom "Title bottom"
+    Line.words "SHIFT"
+
+entity tagline "Tagline"
+    Line.words "THE CITY NEVER SLEEPS. NEITHER DO YOU."
+
+entity profile "Profile"
+    Line.words "PROFILE"
+
+entity settings "Settings"
+    Line.words "SETTINGS"
+
+entity quit "Quit"
+    Line.words "QUIT"
+
+entity back "Back"
+    Line.words "BACK"
+
+entity tonight "Tonight"
+    Line.words "TONIGHT"
+
+entity tonight_route "Tonight route"
+    Line.words "UPTOWN LOOP"
+
+entity tonight_stops "Tonight stops"
+    Line.words "12 STOPS   ·   4.8 KM   ·   02:14 AM"
+
+entity backdrop_word "Backdrop word"
+    Line.words "AFTER HOURS"
+
+entity rider "Rider"
+    Line.words "MIRA VALE"
+
+entity rank "Rank"
+    Line.words "RANK 12   ·   218 RUNS"
+
+entity speed "Speed"
+    Line.words "SPEED"
+
+entity focus "Focus"
+    Line.words "FOCUS"
+
+entity flair "Flair"
+    Line.words "FLAIR"
+
+entity stamp "Stamp"
+    Line.words "TOP RATED"
+
+entity scale "Scale"
+    Line.words "UI SCALE"
+
+entity scale_hint "Scale hint"
+    Line.words "DRAG TO RESIZE EVERY SCREEN"

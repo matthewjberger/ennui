@@ -1,0 +1,19 @@
+[package]
+name = "ennui-ui-repeat"
+description = "Repeat lists: a Repeat panel makes one row per item of a bound list source from its first child or a prefab scene, gives each row its Item for bindings, reuses rows by key and streams only the visible rows inside a scrolling panel"
+edition.workspace = true
+version.workspace = true
+publish.workspace = true
+license.workspace = true
+
+[dependencies]
+ennui.workspace = true
+ennui-bind.workspace = true
+ennui-document.workspace = true
+ennui-platform.workspace = true
+ennui-lines.workspace = true
+ennui-scene.workspace = true
+ennui-ui.workspace = true
+
+[lints]
+workspace = true

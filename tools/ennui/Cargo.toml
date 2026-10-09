@@ -1,0 +1,25 @@
+[package]
+name = "ennui-tool"
+description = "The ennui command line tool: run, edit, check and sync app repositories, make new apps, and audit code, in Rust on Windows and Linux"
+edition = "2024"
+version = "0.1.0"
+publish = false
+license = "MIT OR Apache-2.0"
+
+[[bin]]
+name = "ennui"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+image = { version = "0.25", default-features = false, features = ["png"] }
+proc-macro2 = { version = "1", features = ["span-locations"] }
+regex = "1"
+serde_json = "1"
+syn = { version = "2", features = ["full", "visit", "extra-traits"] }
+toml_edit = "0.22"
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[workspace]

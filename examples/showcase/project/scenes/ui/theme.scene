@@ -1,0 +1,16 @@
+ennui scene 1
+
+entity theme "Theme"
+    Theme
+    Theme.ink 1 0.95 0.84 1
+    Theme.faint 0.74 0.71 0.64 1
+    Theme.panel 0.035 0.055 0.13 0.96
+    Theme.header 0.07 0.1 0.21 1
+    Theme.edge 1 0.95 0.84 0.2
+    Theme.accent 1 0.55 0.1 1
+    Theme.input 0.02 0.03 0.08 1
+    Theme.text 20
+    Theme.heading 34
+    Theme.caption 15
+    Theme.round 0
+    Theme.named [{name "glow" color [0.35 0.9 1 1]} {name "warn" color [1 0.42 0.32 1]} {name "beacon" color [1 0.55 0.1 1]} {name "night" color [0.035 0.055 0.13 1]} {name "deep" color [0.02 0.03 0.08 1]} {name "cream" color [1 0.95 0.84 1]} {name "raised" color [0.07 0.1 0.21 1]} {name "paper" color [0.97 0.93 0.83 1]} {name "rule" color [0.035 0.055 0.13 0.25]}]

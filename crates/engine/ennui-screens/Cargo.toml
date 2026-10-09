@@ -1,0 +1,17 @@
+[package]
+name = "ennui-screens"
+description = "Screens opened by name: scenes/ui/<name>.scene loaded into its own placed set that survives level travel, with a subject for bindings, several instances and live reload"
+edition.workspace = true
+version.workspace = true
+publish.workspace = true
+license.workspace = true
+
+[dependencies]
+ennui.workspace = true
+ennui-bind.workspace = true
+ennui-document.workspace = true
+ennui-platform.workspace = true
+ennui-watch.workspace = true
+
+[lints]
+workspace = true

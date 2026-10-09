@@ -1,0 +1,13 @@
+[package]
+name = "editor-choose"
+description = "The colors of the chosen and the hovered element, and how far a click may move and still count as a click"
+edition.workspace = true
+version.workspace = true
+publish.workspace = true
+license.workspace = true
+
+[dependencies]
+nalgebra-glm.workspace = true
+
+[lints]
+workspace = true

@@ -1,0 +1,26 @@
+[package]
+name = "showcase"
+description = "A flashy launcher: a backdrop of turned stripes, a title menu that slides in with a display font and cut buttons, a profile card with filling bars and a stamp, and a settings card"
+edition.workspace = true
+version.workspace = true
+publish.workspace = true
+license.workspace = true
+
+[dependencies]
+ennui.workspace = true
+ennui-document.workspace = true
+ennui-input.workspace = true
+ennui-platform.workspace = true
+ennui-screens.workspace = true
+ennui-state.workspace = true
+ennui-sets.workspace = true
+ennui-ui.workspace = true
+ennui-ui-controls.workspace = true
+ennui-trace.workspace = true
+
+[features]
+tracy = ["ennui-trace/tracy"]
+chrome = ["ennui-trace/chrome"]
+
+[lints]
+workspace = true

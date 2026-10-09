@@ -1,0 +1,185 @@
+ennui scene 1
+
+entity profile "Profile"
+    Host
+    Host.modal true
+    Host.sizing Tall
+    Host.layer 1
+    Panel.wide Fill[1]
+    Panel.tall Fill[1]
+
+entity spot "Spot"
+    parent profile
+    Order 0
+    Pin.at 1 0.5
+    Pin.pivot 1 0.5
+    Pin.nudge -80 0
+    Panel.wide Fixed[520]
+    Panel.tall Fixed[500]
+
+entity card "Card"
+    parent spot
+    Order 0
+    Pin.at 0 0
+    Pin.pivot 0 0
+    Panel.wide Fixed[520]
+    Panel.tall Fixed[500]
+    Panel.pad 40
+    Panel.gap 6
+    Panel.across Start
+    Panel.along Start
+    Turn -0.02
+    Style.fill Named["paper"]
+    Style.shadow Color[0 0 0 0.55]
+    Style.cast 0 16 40 0
+    Bind.entries [{target "Pin.nudge" source "{Motion.right}" format Plain back false}]
+
+entity heading "Heading"
+    parent card
+    Order 0
+    Text.size Fixed[18]
+    Text.color Named["warn"]
+    Bind.entries [{target "Text.words" source "{text.ui.profile}" format Plain back false}]
+
+entity rider "Rider"
+    parent card
+    Order 1
+    Text.size Fixed[76]
+    Text.color Named["night"]
+    Text.font "assets/fonts/bebas_neue/BebasNeue-Regular.ttf"
+    Bind.entries [{target "Text.words" source "{text.ui.rider}" format Plain back false}]
+
+entity rank "Rank"
+    parent card
+    Order 2
+    Text.size Fixed[16]
+    Text.color Named["night"]
+    Bind.entries [{target "Text.words" source "{text.ui.rank}" format Plain back false}]
+
+entity rule "Rule"
+    parent card
+    Order 3
+    Panel.wide Fill[1]
+    Panel.tall Fixed[2]
+    Style.fill Named["rule"]
+
+entity gap "Gap"
+    parent card
+    Order 4
+    Panel.tall Fixed[18]
+
+entity speed_label "Speed label"
+    parent card
+    Order 5
+    Text.size Fixed[26]
+    Text.color Named["night"]
+    Text.font "assets/fonts/bebas_neue/BebasNeue-Regular.ttf"
+    Bind.entries [{target "Text.words" source "{text.ui.speed}" format Plain back false}]
+
+entity speed_track "Speed track"
+    parent card
+    Order 6
+    Panel.wide Fixed[300]
+    Panel.tall Fixed[14]
+    Panel.across Start
+    Style.fill Named["rule"]
+
+entity speed_fill "Speed fill"
+    parent speed_track
+    Order 0
+    Panel.wide Fixed[0]
+    Panel.tall Fixed[14]
+    Style.fill Named["beacon"]
+    Bind.entries [{target "Panel.wide" source "{Motion.speed}" format Plain back false}]
+
+entity focus_label "Focus label"
+    parent card
+    Order 7
+    Text.size Fixed[26]
+    Text.color Named["night"]
+    Text.font "assets/fonts/bebas_neue/BebasNeue-Regular.ttf"
+    Bind.entries [{target "Text.words" source "{text.ui.focus}" format Plain back false}]
+
+entity focus_track "Focus track"
+    parent card
+    Order 8
+    Panel.wide Fixed[300]
+    Panel.tall Fixed[14]
+    Panel.across Start
+    Style.fill Named["rule"]
+
+entity focus_fill "Focus fill"
+    parent focus_track
+    Order 0
+    Panel.wide Fixed[0]
+    Panel.tall Fixed[14]
+    Style.fill Named["night"]
+    Bind.entries [{target "Panel.wide" source "{Motion.focus}" format Plain back false}]
+
+entity flair_label "Flair label"
+    parent card
+    Order 9
+    Text.size Fixed[26]
+    Text.color Named["night"]
+    Text.font "assets/fonts/bebas_neue/BebasNeue-Regular.ttf"
+    Bind.entries [{target "Text.words" source "{text.ui.flair}" format Plain back false}]
+
+entity flair_track "Flair track"
+    parent card
+    Order 10
+    Panel.wide Fixed[300]
+    Panel.tall Fixed[14]
+    Panel.across Start
+    Style.fill Named["rule"]
+
+entity flair_fill "Flair fill"
+    parent flair_track
+    Order 0
+    Panel.wide Fixed[0]
+    Panel.tall Fixed[14]
+    Style.fill Named["warn"]
+    Bind.entries [{target "Panel.wide" source "{Motion.flair}" format Plain back false}]
+
+entity gap_two "Gap two"
+    parent card
+    Order 11
+    Panel.tall Fixed[26]
+
+entity back "Back"
+    parent card
+    Order 12
+    Button.ask "back"
+    Panel.wide Fixed[220]
+    Panel.tall Fixed[44]
+    Panel.pad 18
+    Panel.across Start
+    Style.picture "assets/textures/ui/button.png"
+    Style.corner 12
+    Style.shaped true
+    Style.fill Named["night"]
+    Style.hover.fill Named["beacon"]
+    Style.focus.fill Named["beacon"]
+    Style.hover.ink Named["night"]
+    Style.focus.ink Named["night"]
+    Style.hover.grow 0.05
+    Style.focus.grow 0.05
+    Text.font "assets/fonts/bebas_neue/BebasNeue-Regular.ttf"
+    Text.size Fixed[28]
+    Text.color Named["cream"]
+    Bind.entries [{target "Text.words" source "{text.ui.back}" format Plain back false}]
+
+entity stamp "Stamp"
+    parent card
+    Order 13
+    Pin.at 1 0
+    Pin.pivot 1 0
+    Pin.nudge -30 120
+    Panel.pad 10
+    Turn 0.22
+    Style.fill Keep
+    Style.border 4
+    Style.edge Named["warn"]
+    Text.size Fixed[46]
+    Text.color Named["warn"]
+    Text.font "assets/fonts/bebas_neue/BebasNeue-Regular.ttf"
+    Bind.entries [{target "Text.words" source "{text.ui.stamp}" format Plain back false} {target "Style.opacity" source "{Motion.stamp}" format Plain back false}]

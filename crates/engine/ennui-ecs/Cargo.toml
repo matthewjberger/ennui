@@ -1,0 +1,17 @@
+[package]
+name = "ennui-ecs"
+edition.workspace = true
+version.workspace = true
+publish.workspace = true
+license.workspace = true
+
+[dependencies]
+rayon = { workspace = true }
+web-time = { workspace = true }
+tracing = { workspace = true, optional = true }
+
+[features]
+profiling = ["dep:tracing"]
+
+[lints]
+workspace = true

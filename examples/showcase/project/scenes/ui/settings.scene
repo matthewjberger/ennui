@@ -1,0 +1,109 @@
+ennui scene 1
+
+entity settings "Settings"
+    Host
+    Host.modal true
+    Host.sizing Tall
+    Host.layer 1
+    Panel.wide Fill[1]
+    Panel.tall Fill[1]
+
+entity menu "Menu"
+    parent settings
+    Order 0
+    Pin.at 0 0
+    Pin.pivot 0 0
+    Panel.wide Fixed[620]
+    Panel.tall Fixed[720]
+    Panel.pad 64
+    Panel.gap 12
+    Panel.across Start
+    Panel.along Start
+    Bind.entries [{target "Pin.nudge" source "{Motion.left}" format Plain back false}]
+
+entity heading "Heading"
+    parent menu
+    Order 0
+    Text.size Fixed[120]
+    Text.color Named["cream"]
+    Text.font "assets/fonts/bebas_neue/BebasNeue-Regular.ttf"
+    Panel.tall Fixed[104]
+    Bind.entries [{target "Text.words" source "{text.ui.settings}" format Plain back false}]
+
+entity card "Card"
+    parent menu
+    Order 1
+    Panel.wide Fixed[460]
+    Panel.pad 28
+    Panel.gap 10
+    Panel.across Start
+    Style.fill Named["raised"]
+    Style.border 2
+    Style.edge Named["beacon"]
+
+entity scale_label "Scale label"
+    parent card
+    Order 0
+    Text.size Fixed[30]
+    Text.color Named["beacon"]
+    Text.font "assets/fonts/bebas_neue/BebasNeue-Regular.ttf"
+    Bind.entries [{target "Text.words" source "{text.ui.scale}" format Plain back false}]
+
+entity scale_row "Scale row"
+    parent card
+    Order 1
+    Panel.wide Fill[1]
+    Panel.flow Row
+    Panel.gap 12
+
+entity scale "Scale"
+    parent scale_row
+    Order 0
+    Slider.low 0.5
+    Slider.high 2
+    Slider.step 0.01
+    Panel.wide Fill[1]
+    Panel.tall Fixed[22]
+    Panel.flow Row
+    Bind.entries [{target "Slider.value" source "{Interface.scale}" format Plain back true}]
+    Samples [["Interface.scale" 1]]
+
+entity scale_value "Scale value"
+    parent scale_row
+    Order 1
+    Panel.wide Fixed[56]
+    Text.size Fixed[30]
+    Text.color Named["cream"]
+    Text.font "assets/fonts/bebas_neue/BebasNeue-Regular.ttf"
+    Bind.entries [{target "Text.words" source "{Interface.scale}" format Decimals[2] back false}]
+    Samples [["Interface.scale" 1]]
+
+entity scale_hint "Scale hint"
+    parent card
+    Order 2
+    Text.size Fixed[15]
+    Text.color Faint
+    Bind.entries [{target "Text.words" source "{text.ui.scale_hint}" format Plain back false}]
+
+entity back "Back"
+    parent menu
+    Order 2
+    Button.ask "back"
+    Panel.wide Fixed[320]
+    Panel.tall Fixed[46]
+    Panel.pad 18
+    Panel.across Start
+    Style.picture "assets/textures/ui/button.png"
+    Style.corner 12
+    Style.shaped true
+    Style.fill Named["raised"]
+    Style.hover.fill Named["beacon"]
+    Style.focus.fill Named["beacon"]
+    Style.hover.ink Named["night"]
+    Style.focus.ink Named["night"]
+    Style.hover.grow 0.05
+    Style.focus.grow 0.05
+    Text.font "assets/fonts/bebas_neue/BebasNeue-Regular.ttf"
+    Text.size Fixed[30]
+    Text.color Named["beacon"]
+    Bind.entries [{target "Text.words" source "{text.ui.back}" format Plain back false}]

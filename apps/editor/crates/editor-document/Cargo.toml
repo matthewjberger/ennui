@@ -1,0 +1,16 @@
+[package]
+name = "editor-document"
+description = "The scene the editor holds open: its layers, edits with undo and redo, the journal that keeps them, the notes for Claude, and the scene text they write"
+edition.workspace = true
+version.workspace = true
+publish.workspace = true
+license.workspace = true
+
+[dependencies]
+ennui.workspace = true
+ennui-document.workspace = true
+ennui-platform.workspace = true
+ennui-scene.workspace = true
+
+[lints]
+workspace = true

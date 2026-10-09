@@ -1,0 +1,19 @@
+ennui scene 1
+
+entity title "Title"
+    Line.words "TEMPLATE"
+
+entity title_line "Title line"
+    Line.words "AN ENNUI APP TO BUILD ON"
+
+entity settings "Settings"
+    Line.words "SETTINGS"
+
+entity quit "Quit"
+    Line.words "QUIT"
+
+entity scale "Scale"
+    Line.words "UI SCALE"
+
+entity back "Back"
+    Line.words "BACK"

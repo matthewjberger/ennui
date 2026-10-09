@@ -1,0 +1,41 @@
+set windows-shell := ["powershell.exe", "-NoProfile", "-Command"]
+
+app := "template"
+engine := ".."
+dynamic := "on"
+tool := "cargo run -q --release --manifest-path " + engine + "/tools/ennui/Cargo.toml --"
+
+default:
+    @just --list
+
+# Run the app, or another package of this repository, with the crates as one shared library
+run package=app *args:
+    @{{tool}} run --dynamic {{dynamic}} {{package}} -- {{args}}
+
+# Run with Chrome tracing, to measure where the frame time goes
+trace package=app *args:
+    @{{tool}} run --dynamic {{dynamic}} --trace {{package}} -- {{args}}
+
+# Open the editor on this app's project, at a screen
+edit scene="ui/home":
+    @{{tool}} edit --dynamic {{dynamic}} --editor {{engine}} {{app}} {{scene}}
+
+# Build the app for release and put it beside a copy of its project folder in target/shipped
+export:
+    @{{tool}} export {{app}}
+
+# Copy the workspace settings into this app: the crate paths, profiles, lock, toolchain and clippy settings
+sync:
+    @{{tool}} sync {{engine}}
+
+# Check that this repository builds: clippy, then a play build of the app
+check:
+    @{{tool}} check --dynamic {{dynamic}} {{app}}
+
+# Check the format, then run clippy on every crate of this repository
+lint:
+    @{{tool}} lint
+
+# Format every crate of this repository
+fmt:
+    @{{tool}} fmt

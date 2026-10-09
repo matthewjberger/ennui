@@ -1,0 +1,17 @@
+[package]
+name = "ennui-ui-dock"
+description = "Docking for ennui-ui: a board of panes in splits and tab groups, with sashes, tab drags, a maximized pane and a saved layout"
+edition.workspace = true
+version.workspace = true
+publish.workspace = true
+license.workspace = true
+
+[dependencies]
+ennui.workspace = true
+ennui-platform.workspace = true
+ennui-ui.workspace = true
+ennui-ui-controls.workspace = true
+nalgebra-glm.workspace = true
+
+[lints]
+workspace = true

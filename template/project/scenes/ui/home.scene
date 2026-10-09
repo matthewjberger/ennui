@@ -1,0 +1,53 @@
+ennui scene 1
+
+entity home "Home"
+    Host
+    Host.sizing Tall
+    Host.modal true
+    Panel.wide Fill[1]
+    Panel.tall Fill[1]
+
+entity card "Card"
+    parent home
+    Panel.wide Fixed[420]
+    Panel.pad 28
+    Panel.gap 14
+    Style.fill Panel
+    Style.border 1.44
+    Style.round 12
+
+entity heading "Heading"
+    parent card
+    Order 0
+    Text.size Heading
+    Bind.entries [{target "Text.words" source "{text.ui.title}" format Plain back false}]
+
+entity line "Line"
+    parent card
+    Order 1
+    Text.color Faint
+    Bind.entries [{target "Text.words" source "{text.ui.title_line}" format Plain back false}]
+
+entity settings "Settings"
+    parent card
+    Order 2
+    Button.ask "settings"
+    Panel.wide Fill[1]
+    Panel.tall Fixed[40]
+    Style.fill Header
+    Style.round 8
+    Style.hover.fill Accent
+    Text.color Ink
+    Bind.entries [{target "Text.words" source "{text.ui.settings}" format Plain back false}]
+
+entity quit "Quit"
+    parent card
+    Order 3
+    Button.ask "quit"
+    Panel.wide Fill[1]
+    Panel.tall Fixed[40]
+    Style.fill Header
+    Style.round 8
+    Style.hover.fill Accent
+    Text.color Ink
+    Bind.entries [{target "Text.words" source "{text.ui.quit}" format Plain back false}]

@@ -1,0 +1,32 @@
+[package]
+name = "editor"
+description = "The scene editor: open a project scene, edit it with the mouse, and let Claude edit it live through editor-edit"
+edition.workspace = true
+version.workspace = true
+publish.workspace = true
+license.workspace = true
+
+[dependencies]
+clap.workspace = true
+ennui.workspace = true
+ennui-animation.workspace = true
+ennui-document.workspace = true
+editor-collab = { path = "crates/editor-collab" }
+editor-core = { path = "crates/editor-core" }
+editor-edit = { path = "crates/editor-edit" }
+editor-text = { path = "crates/editor-text" }
+editor-timeline = { path = "crates/editor-timeline" }
+editor-ui = { path = "crates/editor-ui" }
+ennui-platform.workspace = true
+ennui-sets.workspace = true
+ennui-trace.workspace = true
+ennui-ui-icons.workspace = true
+ennui-ui-rate.workspace = true
+ennui-ui.workspace = true
+
+[features]
+tracy = ["ennui-trace/tracy"]
+chrome = ["ennui-trace/chrome"]
+
+[lints]
+workspace = true

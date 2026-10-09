@@ -1,0 +1,9 @@
+pub const RASTER: f32 = 42.0;
+pub(crate) const WARMED_EACH_FRAME: usize = 8;
+pub(crate) const SHEET: u32 = 1024;
+pub(crate) const PAD: u32 = 6;
+pub(crate) const LAID_CAP: usize = 4096;
+pub const LINE_SPACING: f32 = 1.2;
+pub(crate) const SPREAD: u32 = 8;
+pub(crate) const SUPERSAMPLE: u32 = 4;
+pub(crate) const ELLIPSIS: &str = "\u{2026}";
